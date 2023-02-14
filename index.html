@@ -1,0 +1,67 @@
+<html>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    #newsfeed {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    button,
+    select {
+      font-size: 16px;
+      padding: 8px;
+      margin-right: 10px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    select {
+      font-size: 14px;
+    }
+
+    button:hover,
+    select:hover {
+      background-color: #3e8e41;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+  </style>
+  <body>
+    <h1>NewsFeed</h1>
+    <div id="newsfeed">
+      <button onclick="loadSaved()">Load saved news</button>
+      <button onclick="loadNew()">Load new news</button>
+      <button onclick="like()">like</button>
+      <select onchange="filter(this.value)">
+        <option value="all">All categories</option>
+        <option value="politics">Politics</option>
+        <option value="sports">Sports</option>
+        <option value="entertainment">Entertainment</option>
+      </select>
+      <ul id="articles"></ul>
+    </div>
+  </body>
+</html>
